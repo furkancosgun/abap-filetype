@@ -453,8 +453,6 @@
       "exclude": [],
       "severity": "Error",
       "allow": [
-        "ZCL_AI_MESSAGE",
-        "ZCL_AI_CONTEXT"
       ]
     },
     "invalid_table_index": {
