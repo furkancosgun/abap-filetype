@@ -1,10 +1,10 @@
-CLASS ltcl_test_detector DEFINITION FOR TESTING.
+CLASS lcl_test_detector DEFINITION.
   PUBLIC SECTION.
     INTERFACES zif_filetype_detector.
 ENDCLASS.
 
 
-CLASS ltcl_test_detector IMPLEMENTATION.
+CLASS lcl_test_detector IMPLEMENTATION.
   METHOD zif_filetype_detector~detect.
     rv_detected = xsdbool( iv_buffer = 'AABB' ).
   ENDMETHOD.
@@ -500,7 +500,7 @@ CLASS ltcl_zcl_filetype_detector IMPLEMENTATION.
     DATA(lo_type) = zcl_filetype_type=>new_type( iv_ext  = 'test'
                                                  iv_mime = 'application/x-test' ).
     zcl_filetype_detector=>add_detector( io_type     = lo_type
-                                         io_detector = NEW ltcl_test_detector( ) ).
+                                         io_detector = NEW lcl_test_detector( ) ).
 
     cl_abap_unit_assert=>assert_equals( exp = 'test'
                                         act = zcl_filetype_detector=>detect( 'AABB' )->get_extension( ) ).
