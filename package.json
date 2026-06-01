@@ -1,0 +1,30 @@
+{
+    "name": "abap-filetype",
+    "version": "1.0.0",
+    "description": "ABAP file type detection library - detect file types by magic bytes/signatures",
+    "license": "MIT",
+    "author": "Furkan Cosgun",
+    "homepage": "https://github.com/furkancosgun/abap-filetype",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/furkancosgun/abap-filetype"
+    },
+    "bugs": {
+        "url": "https://github.com/furkancosgun/abap-filetype/issues"
+    },
+    "keywords": [
+        "abap",
+        "filetype",
+        "detector",
+        "magic-bytes",
+        "mime"
+    ],
+    "scripts": {
+        "lint": "abaplint",
+        "unit": "rm -rf output && abap_transpile && echo RUNNING && node --expose-gc output/index.mjs && echo OK"
+    },
+    "devDependencies": {
+        "@abaplint/runtime": "^2.12.3",
+        "@abaplint/transpiler-cli": "^2.12.3"
+    }
+}
